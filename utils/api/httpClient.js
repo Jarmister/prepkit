@@ -7,7 +7,8 @@ const httpClient = axios.create({
 
   }
 });
-httpClient.get("http://localhost:1337/api/restaurants").then((response) => {
+
+httpClient.get("categories").then((response) => {
   const res = response.data;
   return res
 });

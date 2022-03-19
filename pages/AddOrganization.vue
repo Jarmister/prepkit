@@ -1,8 +1,5 @@
 <template>
-  <div class="p-3">
-    <h1 class="flex justify-center text-lg font-bold">title title title</h1>
-    <TagList></TagList>
-  </div>
+  <div></div>
 </template>
 
 <script>

@@ -2,25 +2,32 @@
   <div>
     <div class="container">
       <MyHeader></MyHeader>
-
-      <component v-bind:is="this.Home"></component>> </comp>
-      <MyFooter></MyFooter>
+      <nuxt-link to="Home">HOme</nuxt-link>
+      <nuxt-link to="AddArticle">AddArticle</nuxt-link>
+      <nuxt-link to="AddOrganization">AddOrganization</nuxt-link>
+      <nuxt-link to="Article">Article</nuxt-link>
+      <nuxt-link to="JoinUs">JoinUs</nuxt-link>
+      <nuxt-link to="Login">Login</nuxt-link>
+      <nuxt-link to="Company">Company</nuxt-link>
+      {{ this.res }}
+      <NuxtDynamic component="LoginScreen" />
+      <LazyMyFooter></LazyMyFooter>
     </div>
   </div>
 </template>
 
 <script>
 import httpclient from "@/utils/api/httpClient.js";
-import Home from "@/pages/Home";
 export default {
   name: "App",
-  components: { Home },
+
   data() {
     return {
       res: {},
-
+      dynamic: null,
     };
   },
+  methods: {},
 
   async mounted() {},
   mounted() {},
